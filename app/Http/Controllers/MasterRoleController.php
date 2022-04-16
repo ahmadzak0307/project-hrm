@@ -19,12 +19,12 @@ class MasterRoleController extends Controller
 
     public function __construct(Request $request)
     {
-        $token = $request->header('X-CSRF-Token');
-        $this->cektoken = User::select('hrm_usr_id')->where('hrm_usr_token', $token)->first();
-        if (!$this->cektoken) {
-            throw new Exception("Unauthorized", 401);
-        }
-        $this->date=Carbon::now()->format('Y-m-d H:i:s');
+        // $token = $request->header('X-CSRF-Token');
+        // $this->cektoken = User::select('hrm_usr_id')->where('hrm_usr_token', $token)->first();
+        // if (!$this->cektoken) {
+        //     throw new Exception("Unauthorized", 401);
+        // }
+        // $this->date=Carbon::now()->format('Y-m-d H:i:s');
     }
     /**
      * Display a listing of the resource.
