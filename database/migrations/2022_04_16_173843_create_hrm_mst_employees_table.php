@@ -14,11 +14,11 @@ class CreateHrmMstEmployeesTable extends Migration
     public function up()
     {
         Schema::create('hrm_mst_employees', function (Blueprint $table) {
-            $table->integer('id');
-            $table->integer('nip')->unique();
+            $table->integer('id', 11);
+            $table->integer('nip');
             $table->string('full_name')->nullable();
             $table->string('email')->nullable();
-            $table->integer('id_company')->unique();
+            $table->integer('id_company');
             $table->string('gender')->nullable();
             $table->string('father_name')->nullable();
             $table->string('phone')->nullable();
@@ -26,7 +26,8 @@ class CreateHrmMstEmployeesTable extends Migration
             $table->string('profile_image')->nullable();
             $table->string('alamat')->nullable();
             $table->string('status')->nullable();
-            $table->timestamps();
+            $table->date('hrm_employees_createdAt')->nullable();
+            $table->integer('hrm_employees_createdBy')->nullable();
         });
     }
 

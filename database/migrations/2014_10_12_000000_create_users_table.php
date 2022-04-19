@@ -14,14 +14,14 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('hrm_mst_usr', function (Blueprint $table) {
-            $table->integer('hrm_usr_id');
+            $table->integer('hrm_usr_id', 11);
             $table->string('hrm_usr_nama')->nullable();
             $table->integer('hrm_usr_role')->nullable();
-            $table->string('hrm_usr_email')->unique()->nullable();
+            $table->string('hrm_usr_email')->nullable();
             $table->integer('hrm_role_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->string('hrm_usr_token')->nullable();
+            $table->string('hrm_usr_token', 64)->nullable();
             $table->timestamps();
         });
     }

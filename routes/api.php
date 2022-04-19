@@ -22,5 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 $router->group(['prefix' => 'master'], function () use ($router) {
 	Route::resource('role', 'MasterRoleController');
-	Route::resource('employees', 'admin\employeesController');
+	Route::resource('employees', 'employeesController');
 });

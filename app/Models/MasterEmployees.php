@@ -11,7 +11,7 @@ class MasterEmployees extends Model
 	public $timestamps = false;
 	protected $table = 'hrm_mst_employees';
 	protected $fillable = [
-		'id',
+		// 'id',
 		'nip',
 		'full_name',
 		'email',
@@ -22,6 +22,8 @@ class MasterEmployees extends Model
 		'date_of_birth',
 		'profile_image',
 		'alamat',
-		'status'
+		'status',
+		'hrm_employees_createdAt',
+		'hrm_employees_createdBy'
 	];
 }

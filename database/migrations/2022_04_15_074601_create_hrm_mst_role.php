@@ -14,8 +14,7 @@ class CreateHrmMstRole extends Migration
     public function up()
     {
         Schema::create('hrm_mst_role', function (Blueprint $table) {
-            $table->integer('hrm_role_id');
-            $table->integer('hrm_usr_role')->nullable();
+            $table->integer('hrm_role_id', 11);
             $table->string('hrm_role_name')->nullable();
             $table->integer('hrm_role_stat')->nullable();
             $table->datetime('hrm_role_createdAt')->nullable();
