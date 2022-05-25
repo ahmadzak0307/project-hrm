@@ -14,8 +14,13 @@ class CreateHrmMstFunction extends Migration
     public function up()
     {
         Schema::create('hrm_mst_function', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('hrm_func_id');
+            $table->string('hrm_name_func')->nullable();
+            $table->integer('hrm_dep_id',11);
+            $table->date('hrm_func_createdAt')->nullable();
+            $table->integer('hrm_func_createdBy')->nullable();
+            $table->date('hrm_func_updatedAt')->nullable();
+            $table->integer('hrm_func_updatedBy')->nullable();
         });
     }
 

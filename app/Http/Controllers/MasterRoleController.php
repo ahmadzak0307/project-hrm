@@ -12,6 +12,7 @@ use DB;
 use Log;
 use Illuminate\Support\Facades\Validator;
 use Exception;
+use Throwable;
 use Carbon\Carbon;
 date_default_timezone_set('Asia/Jakarta');
 
